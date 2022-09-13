@@ -1,3 +1,6 @@
+# Penulisan nama service menggunakan huruf kecil
+# Penulisan protocol menggunakan huruf kapital
+
 kind: Service
 apiVersion: v1
 metadata:
