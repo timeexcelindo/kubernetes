@@ -22,6 +22,10 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "https"
     service.alpha.kubernetes.io/app-protocols: "https"
 spec:
+  tls:
+    - hosts:
+      - dashboard.kubernetes.my.id
+      secretName: kubernetes.my.id
   rules:
     - host: dashboard.kubernetes.my.id
       http:
