@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: TENTUKAN_NAMA_INGRESS
+  namespace: TENTUKAN_NAMESPACE
+spec:
+  tls:
+    - hosts:
+      - TENTUKAN_NAMA_HOST
+      secretName: TENTUKAN_NAMA_SECRET_TLS
+  rules:
+    - host: TENTUKAN_NAMA_HOST
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: TENTUKAN_NAMA_SERVICE
+                port:
+                  number: TENTUKAN_PORT
