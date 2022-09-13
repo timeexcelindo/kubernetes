@@ -7,9 +7,10 @@ metadata:
   name: TENTUKAN_NAMA_SERVICE
   namespace: TENTUKAN_NAMESPACE
 spec:
+  selector:
+    app: TENTUKAN_POD_BERDASARKAN_LABEL
   ports:
     - name: TENTUKAN_NAMA_PORT
       protocol: TENTUKAN_PROTOCOL
       port: TENTUKAN_PORT
       targetPort: TENTUKAN_PORT
-  clusterIP: TENTUKAN_IP_POD
