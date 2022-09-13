@@ -1,6 +1,8 @@
 # Penulisan nama service menggunakan huruf kecil
 # Penulisan protocol menggunakan huruf kapital
 
+# Internal Service
+
 kind: Service
 apiVersion: v1
 metadata:
@@ -14,3 +16,20 @@ spec:
       protocol: TENTUKAN_PROTOCOL
       port: TENTUKAN_PORT
       targetPort: TENTUKAN_PORT
+
+# External Service / Load Balancer
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: TENTUKAN_NAMA_SERVICE
+  namespace: TENTUKAN_NAMESPACE
+spec:
+  selector:
+    app: TENTUKAN_POD_BERDASARKAN_LABEL
+  ports:
+    - name: TENTUKAN_NAMA_PORT
+      protocol: TENTUKAN_PROTOCOL
+      port: TENTUKAN_PORT
+      targetPort: TENTUKAN_PORT
+  type: LoadBalancer
